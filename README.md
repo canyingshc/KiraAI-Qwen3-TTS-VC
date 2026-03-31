@@ -4,7 +4,7 @@
 [![KiraAI](https://img.shields.io/badge/platform-KiraAI-purple)]()
 [![License](https://img.shields.io/badge/license-MIT-green)]()
 
-一个为 KiraAI-2.1.0 编写的 **Dashscope Qwen TTS 声音复刻**语音合成 Provider 插件。
+一个为 KiraAI 编写的 **Dashscope Qwen TTS 声音复刻**语音合成 Provider 插件。
 
 支持通过阿里云 Dashscope 的 Realtime WebSocket 接口，将文本合成为语音并以 `Record` 消息元素返回，可无缝接入 KiraAI 的 TTS 流程。
 
@@ -65,7 +65,7 @@ qwen3-tts-vc-realtime-2026-01-15
 ### 步骤
 
 1. **准备音频素材**
-   - 准备一段清晰的 MP3 音频文件作为音色参考
+   - 准备一段清晰的 MP3 音频文件作为音色参考，大致在5-10秒之间的干声，尽量不要有杂音
 
 2. **Base64 编码**
    - 前往 [base64encode.org](https://www.base64encode.org/zh/) 将音频文件转换为 Base64 字符串
@@ -112,8 +112,12 @@ qwen3-tts-vc-realtime-2026-01-15
 
 ```
 .
-├── dashscope_tts.py   # TTS Provider 主文件，放入 core/provider/src/
-├── mp3.py             # 声音注册小工具，用于获取 voice_id
+├── dashscope_tts      # 主文件夹，放入 core/provider/src/
+|   ├── model_clients.py   # TTS Provider 主文件
+|   ├── manifest.json       # 插件元数据
+|   ├── schema.json         # 配置界面定义
+|   └── provider.py         # 模型注册文件
+├── mp3.py             # 阿里云百炼平台的声音注册小工具，用于获取 voice_id
 └── README.md
 ```
 
