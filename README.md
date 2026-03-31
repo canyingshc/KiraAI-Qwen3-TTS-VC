@@ -1,5 +1,8 @@
 # Qwen TTS Provider for KiraAI
 
+[![Plugin Version](https://img.shields.io/badge/version-1.0.0-blue)]()
+[![KiraAI](https://img.shields.io/badge/platform-KiraAI-purple)]()
+[![License](https://img.shields.io/badge/license-MIT-green)]()
 一个为 KiraAI-2.1.0 编写的 **Dashscope Qwen TTS 声音复刻**语音合成 Provider 插件。
 
 支持通过阿里云 Dashscope 的 Realtime WebSocket 接口，将文本合成为语音并以 `Record` 消息元素返回，可无缝接入 KiraAI 的 TTS 流程。
