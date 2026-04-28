@@ -29,7 +29,7 @@ pip install dashscope httpx
 
 ### 2. 放置文件
 
-将 `dashscope_tts.py` 复制到以下路径：
+将 `dashscope_tts` 整个文件夹复制到以下路径：
 
 ```
 KiraAI-2.1.0/core/provider/src/
