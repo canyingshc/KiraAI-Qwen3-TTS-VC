@@ -1,0 +1,39 @@
+{
+  "provider_config": {
+    "api_key": {
+      "name": "Dashscope API Key",
+      "type": "sensitive",
+      "default": null,
+      "hint": "阿里云百炼平台 API Key"
+    }
+  },
+  "model_config": {
+    "tts": {
+      "mode": {
+        "name": "TTS Mode",
+        "type": "string",
+        "default": "vc-realtime",
+        "hint": "可选值: vc-realtime | vd-realtime | vc | vd。留空则从 model_id 自动推断。vc=声音复刻(需注册音色) vd=声音设计(使用设计音色)"
+      },
+      "voice_id": {
+        "name": "Voice ID",
+        "type": "string",
+        "default": null,
+        "hint": "VC模式: 通过 voice_manager.py 注册获得的音色ID；VD模式: 设计音色名称"
+      },
+      "ws_url": {
+        "name": "WebSocket URL",
+        "type": "string",
+        "default": "wss://dashscope.aliyuncs.com/api-ws/v1/realtime",
+        "hint": "北京: wss://dashscope.aliyuncs.com/api-ws/v1/realtime | 新加坡: wss://dashscope-intl.aliyuncs.com/api-ws/v1/realtime (仅 realtime/vd 模式)"
+      },
+      "timeout": {
+        "name": "Timeout",
+        "type": "integer",
+        "default": 120,
+        "min": 1,
+        "hint": "合成超时时间（秒）"
+      }
+    }
+  }
+}
